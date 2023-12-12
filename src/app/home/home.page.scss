@@ -1,0 +1,38 @@
+/* src/app/home/home.page.scss */
+
+ion-header {
+  background-color: black;
+  /* Fondo negro para el encabezado */
+  color: rgb(236, 236, 236);
+  /* Texto en color naranja en el encabezado */
+}
+
+.header-section {
+  background-color: black;
+  color: rgb(236, 236, 236);
+  text-align: center;
+  padding: 20px;
+}
+
+.features-section {
+  background-color: black;
+  color: white;
+  /* Texto en blanco para destacar las características */
+  padding: 20px;
+}
+
+.join-us-section {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Actualizar los estilos del botón */
+ion-button {
+  --background: #FFA500;
+  /* Naranja mandarina */
+  --color: white;
+  /* Texto en blanco en el botón */
+  margin-top: 20px;
+}

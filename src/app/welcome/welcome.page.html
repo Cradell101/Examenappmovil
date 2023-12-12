@@ -1,0 +1,51 @@
+<!-- Contenedor principal centrado -->
+<ion-content class="ion-padding ion-text-center ion-align-items-center">
+
+  <!-- Barra de herramientas con botón de inicio -->
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="goToHomePage()">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Bienvenido a Nuestra Aplicación</ion-title>
+  </ion-toolbar>
+
+  <!-- Sección 1: Bienvenida -->
+  <div class="welcome-section">
+    <h2 class="ion-text-uppercase">¡Bienvenido!</h2>
+    <p>Gracias por unirte a nuestra comunidad. Estamos emocionados de tenerte con nosotros.</p>
+    <p>Descubre las funciones únicas que hemos preparado para ti.</p>
+  </div>
+
+  <!-- Sección 3: Lista de viajes disponibles -->
+  <div class="travel-list-section">
+    <h3>Viajes Disponibles</h3>
+
+    <ion-list lines="full">
+      <ion-item *ngFor="let travel of travelService.travelList; let i = index">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ travel.conductorName }}</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <p>RUT: {{ travel.conductorRut }}</p>
+            <p>Lugar de Origen: {{ travel.lugarOrigen }}</p>
+            <p>Lugar de Destino: {{ travel.lugarDestino }}</p>
+            <p>Valor Máximo del Pasaje: {{ travel.valorMaximoPasaje }} CLP</p>
+
+            <!-- Botón para tomar el viaje -->
+            <ion-button (click)="tomarViaje(travel)" expand="full" color="success">
+              Tomar Viaje
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Botón para agregar nuevo viaje -->
+  <ion-button (click)="goToNewTripPage()">Agregar Viaje</ion-button>
+
+</ion-content>

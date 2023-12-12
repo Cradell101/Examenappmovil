@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registrarse
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="registrarse()">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="registration-section">
+    <h2>¡Únete a Nosotros!</h2>
+    <p>Completa los siguientes campos para crear tu cuenta.</p>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Nombre de usuario</ion-label>
+      <ion-input [(ngModel)]="nombreUsuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Apellido</ion-label>
+      <ion-input [(ngModel)]="apellido" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="correo" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="primary">Verificar Contraseña</ion-label>
+      <ion-input [(ngModel)]="verificarContrasena" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" color="orange" (click)="registrarse()">Registrarse</ion-button>
+  </div>
+
+  <div class="additional-info">
+    <h3>¿Ya Tienes una Cuenta?</h3>
+    <p>Si ya eres miembro, puedes iniciar sesión desde la página de inicio.</p>
+    <ion-button expand="full" color="orange" (click)="goToLoginPage()">Iniciar Sesión</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,40 @@
+<!-- src/app/new-trip/new-trip.page.html -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Nuevo Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Nombre del Conductor</ion-label>
+      <ion-input [(ngModel)]="conductorName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">RUT del Conductor</ion-label>
+      <ion-input [(ngModel)]="conductorRut" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lugar de Origen</ion-label>
+      <ion-input [(ngModel)]="lugarOrigen" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Lugar de Destino</ion-label>
+      <ion-input [(ngModel)]="lugarDestino" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor Máximo del Pasaje</ion-label>
+      <ion-input type="number" [(ngModel)]="valorMaximoPasaje" required></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand="full" color="success" (click)="publishTravel()">Publicar Viaje</ion-button>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "prograapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
